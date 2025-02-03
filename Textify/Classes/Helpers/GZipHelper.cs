@@ -2,7 +2,6 @@
 
 public static class GZipHelper
 {
-    private const int Buffer_Size = 2048;
     public static async Task<byte[]> Zip(this byte[] Input)
     {
         var msInput = new MemoryStream(Input);

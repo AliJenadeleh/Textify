@@ -25,7 +25,7 @@
         return false;
     }
 
-    public IEnumerable<byte[]> GetChunks => SourceData.Chunk(chunkSize);
+    public IEnumerable<byte[]> GetChunks => chunkSize > 0 ? SourceData.Chunk(chunkSize) : [SourceData];
 
     public string DestDir => _destDir;
 }
